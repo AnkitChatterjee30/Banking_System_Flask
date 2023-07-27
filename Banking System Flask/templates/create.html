@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create new Account</title>
+</head>
+<style>
+    body{
+        background-color: lightgray;
+    }
+    h2{
+        font-size: 50px;
+        margin-left: 550px;
+    }
+    .container{
+        position: absolute;
+        margin-left: 470px;
+        margin-top: 40px;
+    }
+    label{
+        font-size: 35px;
+    }
+    input[type="password"],
+    input[type="text"],
+    input[type="number"],
+    input[type="password"]{
+        width: 500px;
+        font-size: 24px;
+        height: 40px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    input[type=submit] {
+        background-color: black;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        font-size: 24px;
+        font-weight: 600;
+        border-radius: 4px;
+        cursor: pointer;
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 20px;
+        box-shadow: 5px 5px 15px black;
+    }
+
+    input[type=submit]:hover {
+        background-color: white;
+        color: black;
+        font-weight: 600;
+    }
+    img{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        margin-left: 30px;
+    }
+</style>
+<body>
+    <img src="static/Money_Growth.png" alt="">
+    <h2>Create new account</h2>
+    <div class="container">
+    <form action="/confirm" method="post" onsubmit="return myFunction()">
+        <label for="name">Name :</label>
+        <input type="text" class="fname" name="fname" required autocomplete="off">
+        <br>
+        <br>
+        <label for="password">New PIN :</label>
+        <input type="password" class="pass" name="pass" required>
+        <br>
+        <br>
+        <label for="password">Confirm PIN :</label>
+        <input type="password" class="confirm" name="confirm" required>
+        <br>
+        <br>
+        <label for="phone">Phone no :</label>
+        <input type="number" class="phone" name="phone" required autocomplete="off">
+        <br>
+        <br>
+        <label for="aadhar">Aadhar no :</label>
+        <input type="number" class="aadhar" name="aadhar" required>
+        <br>
+        <br>
+        <label for="money">Account Balance :</label>
+        <input type="number" class="balance" name="money" required>
+        <br>
+        <br>
+        <input type="submit" onclick="myFunction()">
+    </form>
+    </div>
+    <script>
+            function myFunction() {
+            var pin = document.querySelector('.pass').value;
+            var confirm = document.querySelector('.confirm').value;
+            var name = document.querySelector('.fname').value;
+            if (pin == confirm && pin.length == 4 && name.length > 3) {
+                alert("Welcome. Your details are correct");
+                return true
+            }
+            else if (pin != confirm) {
+                alert("PIN and Confirm PIN should be same");
+                return false;
+            }
+            else if (pin.length != 4) {
+                alert("PIN should be of 4 charcters");
+                return false;
+            }
+            else if (name.length <= 2) {
+                alert("Your name should be of atleast 2 characters");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking System</title>
+</head>
+<style>
+    h1 {
+        position: absolute;
+        margin-top: 20px;
+        margin-left: 400px;
+        font-size: 55px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    body {
+        background-color: rgb(171, 204, 223);
+    }
+
+    .create,
+    .display,
+    .login,
+    .trans {
+        width: 450px;
+        height: 80px;
+        font-size: 30px;
+        border: 1px solid black;
+        box-shadow: 5px 5px 5px black;
+        border-radius: 5%;
+        text-align: center;
+        background-color: rgb(13, 92, 92);
+        position: absolute;
+        align-content: center;
+    }
+    .create:hover,
+    .display:hover,
+    .login:hover,
+    .trans:hover {
+        background-color: cadetblue;
+    }
+
+    a {
+        color: azure;
+        text-decoration: none;
+    }
+    a:hover{
+        color: yellow;
+    }
+
+    .create {
+        margin-top: 200px;
+        margin-left: 200px;
+    }
+
+    .display {
+        margin-top: 200px;
+        margin-left: 900px;
+    }
+
+    .login {
+        margin-top: 400px;
+        margin-left: 200px;
+    }
+
+    .trans {
+        margin-top: 400px;
+        margin-left: 900px;
+    }
+    img{
+        width: 220px;
+        height: 180px;
+        position: absolute;
+        }
+</style>
+
+<body>
+    <img src="static/Notes.png" alt="">
+    <div class="container">
+        <h1>
+            Ankit International Bank
+        </h1>
+        <div class="create"><a href="/create">Create new Account</a></div>
+        <div class="display"><a href="/display">Look at all the Accounts</a></div>
+        <div class="login"><a href="/login">Login to check balance</a></div>
+        <div class="trans"><a href="/transaction">Withdraw/Deposit Money</a></div>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</body>
+
+</html>
